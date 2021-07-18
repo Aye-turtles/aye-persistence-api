@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Data
-@Entity
+@Entity(name = "status")
 public class StatusEntity {
 
     @Id
