@@ -9,7 +9,7 @@ public interface NestLogsService {
 
     public List<NestLogsEntity> findAll();
 
-    public List<NestLogsEntity> findByNestEntityId(Long nestEntityId);
+    public List<NestLogsEntity> findByNestEntityId(Integer nestEntityId);
 
     public NestLogsEntity createNestLogsEntity(NestLogsEntity nestLogsEntity);
 

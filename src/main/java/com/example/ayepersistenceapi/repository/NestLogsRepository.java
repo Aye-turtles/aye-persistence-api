@@ -10,5 +10,5 @@ import java.util.List;
 public interface NestLogsRepository extends JpaRepository<NestLogsEntity, Long> {
 
     @Query("Select nsl from nestlogs nsl where nsl.id_nest.id =:nestEntityId")
-    List<NestLogsEntity> findByNestEntityId(@Param("nestEntityId") Long nestEntityId);
+    List<NestLogsEntity> findByNestEntityId(@Param("nestEntityId") Integer nestEntityId);
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("api/")
@@ -22,8 +23,8 @@ public class NestServiceImpl implements NestService {
 
     @Override
     @GetMapping(path="nest/{nest_id}")
-    public NestEntity findById(@PathVariable("nest_id")Long id) {
-        return (NestEntity) nestRepository.findById(id).get();
+    public NestEntity findById(@PathVariable("nest_id")Integer id) {
+        return nestRepository.findByNestId(id);
     }
 
     @Override

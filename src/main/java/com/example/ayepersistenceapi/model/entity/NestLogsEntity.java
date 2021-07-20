@@ -9,11 +9,11 @@ import java.util.Date;
 @Entity(name = "nestlogs")
 public class NestLogsEntity {
     @Id
-    private Long id;
-    @ManyToOne()
-    @JoinColumn(name = "id_nest")
-    private NestEntity id_nest;
+    private Integer id;
     private Date log_Date;
     private Double temperature;
     private Double humidity;
+    @ManyToOne()
+    @JoinColumn(name = "id_nest")
+    private NestEntity id_nest;
 }

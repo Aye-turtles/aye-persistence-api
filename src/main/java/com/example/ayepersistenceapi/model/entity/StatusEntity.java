@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class StatusEntity {
 
     @Id
-    private Long id;
+    private Integer id;
     private String name;
     private String value;
 }

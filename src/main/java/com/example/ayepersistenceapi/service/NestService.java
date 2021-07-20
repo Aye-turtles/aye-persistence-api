@@ -8,7 +8,7 @@ public interface NestService {
 
     public List<NestEntity> findAll();
 
-    public NestEntity findById(Long id);
+    public NestEntity findById(Integer id);
 
     public List<NestEntity> findByStatus(String status);
 

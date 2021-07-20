@@ -15,4 +15,7 @@ public interface NestRepository extends JpaRepository<NestEntity, Long> {
 
     @Query("Select ns from nest ns where ns.status.name =:status")
     List<NestEntity> findByStatus(@Param("status") String status);
+
+    @Query("Select ns from nest ns where ns.id =:id")
+    NestEntity findByNestId(@Param("id") Integer id);
 }
