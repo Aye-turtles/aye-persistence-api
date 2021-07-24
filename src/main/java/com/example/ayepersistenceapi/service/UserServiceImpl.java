@@ -16,19 +16,19 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @GetMapping(path="users/")
-    public List<UserEntity> findAll() {
+    public List<UserEntity> findAllUsers() {
         return userRepository.findAll();
     }
 
     @Override
     @GetMapping(path = "user/{username}")
-    public UserEntity findByUsername(@PathVariable("username")String username) {
+    public UserEntity findUserByUsername(@PathVariable("username")String username) {
         return userRepository.findByUsername(username);
     }
 
     @Override
     @PostMapping(path = "user/")
-    public UserEntity createUser(@RequestBody UserEntity user) {
+    public UserEntity createNewUser(@RequestBody UserEntity user) {
         return userRepository.saveAndFlush(user);
     }
 

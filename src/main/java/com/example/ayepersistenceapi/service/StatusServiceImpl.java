@@ -22,7 +22,7 @@ public class StatusServiceImpl implements StatusService {
 
     @Override
     @PostMapping(path="status/")
-    public StatusEntity saveStatus(@RequestBody StatusEntity status) {
+    public StatusEntity createNewStatus(@RequestBody StatusEntity status) {
         return statusRepository.save(status);
     }
 }

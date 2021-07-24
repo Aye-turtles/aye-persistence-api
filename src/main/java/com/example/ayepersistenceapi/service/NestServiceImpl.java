@@ -17,31 +17,31 @@ public class NestServiceImpl implements NestService {
 
     @Override
     @GetMapping(path="nests/")
-    public List<NestEntity> findAll() {
+    public List<NestEntity> findAllNests() {
         return nestRepository.findAll();
     }
 
     @Override
     @GetMapping(path="nest/{nest_id}")
-    public NestEntity findById(@PathVariable("nest_id")Integer id) {
+    public NestEntity findNestById(@PathVariable("nest_id")Integer id) {
         return nestRepository.findByNestId(id);
     }
 
     @Override
     @GetMapping(path = "nests/status/{status}")
-    public List<NestEntity> findByStatus(@PathVariable("status") String status) {
+    public List<NestEntity> findNestsByStatus(@PathVariable("status") String status) {
         return nestRepository.findByStatus(status);
     }
 
     @Override
     @GetMapping(path = "nests/collector/{username}")
-    public List<NestEntity> findByCollectorUserName(@PathVariable("username")String collectorUsername) {
+    public List<NestEntity> findNestsByCollectorUserName(@PathVariable("username")String collectorUsername) {
         return nestRepository.findByCollectorUserName(collectorUsername);
     }
 
     @Override
     @PostMapping(path = "nest/")
-    public NestEntity createNest(@RequestBody NestEntity nestEntity) {
+    public NestEntity createNewNest(@RequestBody NestEntity nestEntity) {
         return nestRepository.saveAndFlush(nestEntity);
     }
 

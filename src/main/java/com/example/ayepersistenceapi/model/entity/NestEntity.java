@@ -10,6 +10,7 @@ import java.util.function.Supplier;
 @Entity(name = "nest")
 public class NestEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Integer amount_Eggs;

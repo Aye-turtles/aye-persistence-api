@@ -6,15 +6,15 @@ import java.util.List;
 
 public interface NestService {
 
-    public List<NestEntity> findAll();
+    public List<NestEntity> findAllNests();
 
-    public NestEntity findById(Integer id);
+    public NestEntity findNestById(Integer id);
 
-    public List<NestEntity> findByStatus(String status);
+    public List<NestEntity> findNestsByStatus(String status);
 
-    public List<NestEntity> findByCollectorUserName(String collectorUsername);
+    public List<NestEntity> findNestsByCollectorUserName(String collectorUsername);
 
-    public NestEntity createNest(NestEntity nestEntity);
+    public NestEntity createNewNest(NestEntity nestEntity);
 
     public NestEntity updateNest(NestEntity nestEntity);
 

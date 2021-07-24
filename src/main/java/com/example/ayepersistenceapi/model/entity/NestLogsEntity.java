@@ -9,6 +9,7 @@ import java.util.Date;
 @Entity(name = "nestlogs")
 public class NestLogsEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Date log_Date;
     private Double temperature;

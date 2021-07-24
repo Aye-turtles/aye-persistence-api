@@ -7,10 +7,10 @@ import java.util.List;
 
 public interface NestLogsService {
 
-    public List<NestLogsEntity> findAll();
+    public List<NestLogsEntity> findAllNestsLogs();
 
     public List<NestLogsEntity> findByNestEntityId(Integer nestEntityId);
 
-    public NestLogsEntity createNestLogsEntity(NestLogsEntity nestLogsEntity);
+    public NestLogsEntity createNewNestLogsEntity(NestLogsEntity nestLogsEntity);
 
 }
