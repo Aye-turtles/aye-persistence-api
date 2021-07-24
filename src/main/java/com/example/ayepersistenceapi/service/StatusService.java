@@ -8,5 +8,5 @@ public interface StatusService {
 
     public List<StatusEntity> findAll();
 
-    StatusEntity saveStatus(StatusEntity status);
+    StatusEntity createNewStatus(StatusEntity status);
 }

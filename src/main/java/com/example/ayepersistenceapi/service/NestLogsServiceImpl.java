@@ -16,7 +16,7 @@ public class NestLogsServiceImpl implements NestLogsService {
 
     @Override
     @GetMapping(path="nests-logs/")
-    public List<NestLogsEntity> findAll() {
+    public List<NestLogsEntity> findAllNestsLogs() {
         return nestLogsRepository.findAll();
     }
 
@@ -28,7 +28,7 @@ public class NestLogsServiceImpl implements NestLogsService {
 
     @Override
     @PostMapping(path="nest-log/")
-    public NestLogsEntity createNestLogsEntity(@RequestBody NestLogsEntity nestLogsEntity) {
+    public NestLogsEntity createNewNestLogsEntity(@RequestBody NestLogsEntity nestLogsEntity) {
         return nestLogsRepository.saveAndFlush(nestLogsEntity);
     }
 }

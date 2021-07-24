@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface UserService {
 
-    public List<UserEntity> findAll();
+    public List<UserEntity> findAllUsers();
 
-    public UserEntity findByUsername(String username);
+    public UserEntity findUserByUsername(String username);
 
-    public UserEntity createUser(UserEntity user);
+    public UserEntity createNewUser(UserEntity user);
 
     public UserEntity updateUser(UserEntity user);
 }
